@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[5]:
+
+
+import re
+
+m = re.search(r'([a-zA-Z0-9])\1+',input())
+
+
+if m:
+    print(m.group(1))
+else:
+    print(-1)
+
+
+# In[ ]:
+
+
+
+
