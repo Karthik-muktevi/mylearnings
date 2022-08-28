@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>history</title>
+</head>
+<body>
+<nav>
+    <a href="{{url_for('home')}}">Home</a>
+    <a href="{{url_for('history')}}">History</a>
+</nav>
+<table>
+    <tr>
+
+        <th>ID</th>
+        <th>Long url</th>
+        <th>Short url</th>
+
+
+    </tr>
+
+   {% for url in history %}
+    <tr>
+        <td>{{url.id}}</td>
+        <td>{{url.long_url}}</td>
+        <td>{{url.short_url}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
