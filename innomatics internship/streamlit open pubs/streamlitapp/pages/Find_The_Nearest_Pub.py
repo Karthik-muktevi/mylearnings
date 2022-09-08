@@ -16,6 +16,6 @@ dist = np.sqrt(np.sum((x1 - x)**2,axis=1))
 
 
 k=5
-sort = np.argpartition(distances,k-1)[:k]
+sort = np.argsort(distances)[:k]
 if submit:
     st.map(df.iloc[sort])
